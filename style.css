@@ -1,0 +1,24 @@
+table, td, tr {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+}
+
+table td:nth-child(1)
+{
+    width: 10%;
+}
+
+table td:nth-child(2)
+{
+    width: 50%;
+}
+
+table td:nth-child(3)
+{
+    width: 40%;
+}
