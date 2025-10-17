@@ -1,0 +1,17 @@
+ul{
+    display:flex;
+    flex-direction: row;
+    gap: 15px;
+    text-decoration: none;
+    margin: auto;
+    width: 69%;
+    
+}
+
+li{
+    border-radius: 50px;
+    padding: 55px;
+    border: solid 1px rgb(250, 5, 128);
+    text-decoration: none;
+    background-color: blanchedalmond;
+}
