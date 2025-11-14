@@ -44,9 +44,11 @@
 
 .first-page .button {
     background-color: blue;
-    border: 100px;
+    background-size: cover;
+    border: 200px;
     border-radius: 30px;
     margin-top: 100px;
+    
     
     
 }
