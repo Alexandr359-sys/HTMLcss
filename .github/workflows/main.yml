@@ -27,4 +27,4 @@ jobs:
           dist_target_dir: "web/"
  
           delete: "true"
-          exclude: "'^logs/' '^README.md'
+          exclude: "'^logs/' '^README.md'"
