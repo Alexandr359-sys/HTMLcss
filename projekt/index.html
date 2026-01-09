@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="stylovka.css">
+  <title>Rezervační systém - Ověření emailu</title>
+  
+</head>
+<body>
+ 
+<div id="page1">
+  <h1>Rezervační systém - Ověření emailu</h1>
+  <p style="text-align:center">Zadejte email pro pokračování:</p>
+ 
+  <div style="text-align:center">
+    <input id="emailInput" type="email" placeholder="např. uzivatel@email.cz" />
+    <br>
+    <button onclick="validateEmail()">Pokračovat</button>
+    <p id="emailError" style="color:red"></p>
+  </div>
+</div>
+ 
+<div id="page2">
+  <h1>Výběr míst</h1>
+  <div class="platno">Plátno</div>
+  <p style="text-align:center">Zelená = vaše volba, Červená = obsazené</p>
+ 
+  <div class="hall" id="hall"></div>
+ 
+  <div style="text-align:center">
+    <button onclick="confirmSeats()">Potvrdit rezervaci</button>
+  </div>
+ 
+  <div id="output" style="text-align:center"></div>
+</div>
+ 
+<div id="page3">
+  <h1>Rezervace dokončena</h1>
+  <p id="successText" style="text-align:center; font-size:20px"></p>
+</div>
+ 
+<script src="index.JS"></script>
+ 
+</body>
+</html>
