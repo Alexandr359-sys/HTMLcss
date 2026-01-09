@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Error Handling Úlohy – Tailwind UI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex h-screen font-sans bg-gray-100">
+ 
+<!-- Sidebar -->
+<div class="w-64 bg-gray-800 text-white p-6 overflow-y-auto">
+    <h2 class="text-xl font-bold mb-4">Úlohy</h2>
+    <ul id="task-list" class="space-y-2">
+        <li data-target="task90" class="cursor-pointer hover:underline">90 – ReferenceError</li>
+        <li data-target="task91" class="cursor-pointer hover:underline">91 – TypeError</li>
+        <li data-target="task92" class="cursor-pointer hover:underline">92 – RangeError</li>
+        <li data-target="task93" class="cursor-pointer hover:underline">93 – SyntaxError</li>
+        <li data-target="task94" class="cursor-pointer hover:underline">94 – URIError</li>
+        <li data-target="task95" class="cursor-pointer hover:underline">95 – Throw vlastní Error</li>
+        <li data-target="task96" class="cursor-pointer hover:underline">96 – Chyby v Promise</li>
+        <li data-target="task97" class="cursor-pointer hover:underline">97 – Chyby v async/await</li>
+        <li data-target="task98" class="cursor-pointer hover:underline">98 – Fetch + HTTP statusy</li>
+        <li data-target="task99" class="cursor-pointer hover:underline">99 – Centralizovaný Error Handler</li>
+    </ul>
+</div>
+ 
+<!-- Hlavní obsah -->
+<div class="flex-1 p-6 overflow-y-auto" id="main">
+ 
+<section id="task90" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 90: ReferenceError</h3>
+    <button id="run90" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Spustit</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="output90"></div>
+</section>
+ 
+<section id="task91" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 91: TypeError</h3>
+    <input type="text" id="input91" placeholder="Zadej parametr" class="w-full p-2 border rounded mb-2">
+    <button id="run91" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Spustit</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="output91"></div>
+</section>
+ 
+<section id="task92" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 92: RangeError</h3>
+    <input type="number" id="input92" placeholder="Velikost pole" class="w-full p-2 border rounded mb-2">
+    <button id="run92" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Spustit</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="output92"></div>
+</section>
+ 
+<section id="task93" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 93: SyntaxError</h3>
+    <input type="text" id="input93" placeholder="Zadej kód" class="w-full p-2 border rounded mb-2">
+    <button id="run93" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Spustit</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="output93"></div>
+</section>
+ 
+<section id="task94" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 94: URIError</h3>
+    <input type="text" id="input94" placeholder="Zadej URI" class="w-full p-2 border rounded mb-2">
+    <button id="run94" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Spustit</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="output94"></div>
+</section>
+ 
+<section id="task95" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 95: Throw vlastní Error</h3>
+    <input type="number" id="input95" placeholder="Zadej věk" class="w-full p-2 border rounded mb-2">
+    <button id="run95" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Spustit</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="output95"></div>
+</section>
+ 
+<section id="task96" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 96: Chyby v Promise</h3>
+    <button id="run96" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Spustit</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="output96"></div>
+</section>
+ 
+<section id="task97" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 97: Chyby v async/await</h3>
+    <input type="text" id="input97" placeholder="Zadej URL" class="w-full p-2 border rounded mb-2">
+    <button id="run97" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Spustit</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="output97"></div>
+</section>
+ 
+<section id="task98" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 98: Fetch + HTTP statusy</h3>
+    <input type="text" id="input98" placeholder="Zadej URL" class="w-full p-2 border rounded mb-2">
+    <button id="run98" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Spustit</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="output98"></div>
+</section>
+ 
+<section id="task99" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 99: Centralizovaný Error Handler</h3>
+    <button id="run99" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Simulovat chybu</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="output99"></div>
+</section>
+ 
+</div>
+ 
+<script>
+/* Sidebar scrollování */
+document.querySelectorAll('#task-list li').forEach(item => {
+    item.addEventListener('click', () => {
+        const target = document.getElementById(item.dataset.target);
+        target.scrollIntoView({behavior:'smooth'});
+    });
+});
+</script>
+ 
+<!-- Externí JS s implementací funkcí -->
+<script src="index.JS"></script>
+ 
+
+ 
+</body>
+</html>
