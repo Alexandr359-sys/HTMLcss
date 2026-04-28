@@ -4,43 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="stylovka.css">
-  <title>Rezervační systém - Ověření emailu</title>
-  
+  <title>Cinema Cichna - Rezervace</title>
 </head>
 <body>
- 
-<div id="page1">
-  <h1>Rezervační systém - Ověření emailu</h1>
-  <p style="text-align:center">Zadejte email pro pokračování:</p>
- 
-  <div style="text-align:center">
-    <input id="emailInput" type="email" placeholder="např. uzivatel@email.cz" />
-    <br>
-    <button onclick="validateEmail()">Pokračovat</button>
-    <p id="emailError" style="color:red"></p>
+
+<header>
+  <div class="logo">CINEMA <span>CICHNA</span></div>
+</header>
+
+<div class="container">
+  <div id="page1" class="card">
+    <h1>Ověření věrnostního programu</h1>
+    <p>Pro pokračování k výběru sedadel zadejte svůj e-mail:</p>
+    <div class="input-group">
+      <input id="emailInput" type="email" placeholder="vas@email.cz" />
+      <button onclick="validateEmail()">Pokračovat</button>
+    </div>
+    <p id="emailError" class="error"></p>
+  </div>
+
+  <div id="page2">
+    <div class="movie-info">
+      <h1>Výběr sedadel</h1>
+      <p>Sál 1 • Digitální 2D</p>
+    </div>
+
+    <div class="screen-container">
+      <div class="platno">PLÁTNO</div>
+    </div>
+    
+    <div class="legend">
+      <span><div class="seat available"></div> Volné</span>
+      <span><div class="seat selected"></div> Váš výběr</span>
+      <span><div class="seat reserved"></div> Obsazené</span>
+    </div>
+
+    <div class="hall" id="hall"></div>
+
+    <div class="footer-actions">
+      <button class="btn-back" onclick="location.reload()">Zpět</button>
+      <button class="btn-confirm" onclick="confirmSeats()">Rezervovat místa</button>
+    </div>
+    <p id="output" class="error"></p>
+  </div>
+
+  <div id="page3" class="card success">
+    <div class="check-icon">✓</div>
+    <h1>Rezervace dokončena</h1>
+    <p id="successText"></p>
+    <button onclick="location.reload()">Nová rezervace</button>
   </div>
 </div>
- 
-<div id="page2">
-  <h1>Výběr míst</h1>
-  <div class="platno">Plátno</div>
-  <p style="text-align:center">Zelená = vaše volba, Červená = obsazené</p>
- 
-  <div class="hall" id="hall"></div>
- 
-  <div style="text-align:center">
-    <button onclick="confirmSeats()">Potvrdit rezervaci</button>
-  </div>
- 
-  <div id="output" style="text-align:center"></div>
-</div>
- 
-<div id="page3">
-  <h1>Rezervace dokončena</h1>
-  <p id="successText" style="text-align:center; font-size:20px"></p>
-</div>
- 
+
 <script src="index.JS"></script>
- 
 </body>
 </html>
+
